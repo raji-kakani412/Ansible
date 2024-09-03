@@ -4,3 +4,10 @@
   - name: printing play1
     ansible.builtin.debug:
      msg: "Printing Play1"
+
+- name: Play2
+  hosts: web
+  tasks:
+  - name: printing Play2
+    ansible.builtin.debug:
+     msg: "Printing Play2"
