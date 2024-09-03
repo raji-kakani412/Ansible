@@ -1,0 +1,6 @@
+- name: Play1
+  hosts: web
+  tasks:
+  - name: printing play1
+    ansible.builtin.debug:
+     msg: "Printing Play1"
