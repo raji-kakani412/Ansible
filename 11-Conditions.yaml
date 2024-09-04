@@ -1,21 +1,21 @@
 #write a playbook to check if the given number is less than 10 or not
 - name: Number less than 10 or not
   hosts: local
-  connction: local
+  connection: local
 
   vars_prompt:
-  - name: Number
+  - name: MyNumber
     prompt: Please enter a Number
     private: false #not confidential
 
   tasks:
   - name: Print if number less than 10
     ansible.builtin.debug:
-      msg: "Given number {{Number}} is less than 10"
-    when: Number < 10 #Conditional Expression
+      msg: "Given number {{MyNumber}} is less than 10"
+    when: MyNumber < 10 #Conditional Expression
 
   - name: Print if number greater than or equal to 10
     ansible.builtin.debug:
-      msg: "Given number {{Number}} is greater than or equal to 10"
-    when: Number >= 10 #Conditional Expression
+      msg: "Given number {{MyNumber}} is greater than or equal to 10"
+    when: MyNumber >= 10 #Conditional Expression
     
