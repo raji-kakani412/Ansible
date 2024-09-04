@@ -1,0 +1,17 @@
+# Create Expense user
+# to create first check if user already exist or not
+# if exist, dont create
+# if not exist, create
+
+- name: create user
+  hosts: web
+  become: yes
+
+  tasks:
+  - name: Check user exist or not
+    ansible.builtin.command: id expense # ANsible cannot guarantee modules exists for everything . we use direct commands if module not available using command 
+    register: USER # user is a variable that gets output from above command 
+    
+  - name: Print the user information
+    ansible.builtin.debug:
+      msg: "User information is: {{USER}}"

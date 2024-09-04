@@ -4,7 +4,7 @@
   connection: local
 
   vars_prompt:
-  - name: MyNumber
+  - name: MyNumber #Number entered in prompt is considered as String so we need to typecase it when comparing
     prompt: Please enter a Number
     private: false #not confidential
 
