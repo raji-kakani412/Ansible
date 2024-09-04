@@ -32,9 +32,10 @@
   #variables order of preference 
 
   #Command line Arguments
-  #task level variables
-  #files
-  #prompt
-  #play level
+  #Task level variables
+  #Files
+  #Prompt
+  #Play level
   #Inventory
+  #Roles
   
