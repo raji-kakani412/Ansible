@@ -16,3 +16,7 @@
   - name: Print the user information
     ansible.builtin.debug:
       msg: "User information is: {{USER}}"
+
+  - name: create user
+    ansible.builtin.command: useradd expense
+    when USER.rc != 0
