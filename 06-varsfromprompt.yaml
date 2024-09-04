@@ -1,4 +1,3 @@
-#yaml file to get variables input from prompt
 - name: Variables from prompt
   hosts: web
   
