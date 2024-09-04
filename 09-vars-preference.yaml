@@ -1,8 +1,8 @@
 - name: Variables
   hosts: web
   
-  vars_files:
-  - vars-file.yaml
+  #vars_files:
+  #- vars-file.yaml
 
   vars_prompt: #to get values from prompt
   - name: COURSE
@@ -31,4 +31,4 @@
   #preference of variables order
   #Arguments
   #task level variables
-  #   
+  #files
