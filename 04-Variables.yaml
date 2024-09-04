@@ -1,6 +1,6 @@
 - name: Variables
   hosts: web
-  vars: #playlevel variables
+  vars: #playlevel variables,all taks will have access to this
    COURSE: "DevOps with AWS"
    DURATION: "120HRS"
    TRAINER: "SivaKumar Reddy"
@@ -9,7 +9,7 @@
     ansible.builtin.debug:
      msg: "Hi, I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
   - name: print the information
-    vars: #task level variables
+    vars: #task level variables,only for this task
       COURSE: "Ansible"
     ansible.builtin.debug:
      msg: "Hi, I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
