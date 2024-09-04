@@ -15,10 +15,10 @@
   #   prompt: Please enter the trainer name
   #   private: false
 
-  vars: #playlevel variables,all taks will have access to this
-   COURSE: "DevOps with AWS from play level"
-   DURATION: "120HRS"
-   TRAINER: "SivaKumar Reddy"
+  # vars: #playlevel variables,all taks will have access to this
+  #  COURSE: "DevOps with AWS from play level"
+  #  DURATION: "120HRS"
+  #  TRAINER: "SivaKumar Reddy"
   tasks:
   - name: print the information
     # vars: #task level variables,only for this task
@@ -33,3 +33,5 @@
   #task level variables
   #files
   #prompt
+  #play level
+  
