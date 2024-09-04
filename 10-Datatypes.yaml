@@ -6,12 +6,12 @@
     Course: "DevOps with AWS" #String
     Duration: 120 #Number
     Topics: #List
-    -Linux
-    -Shell
-    -Ansible
-    -Terraform
-    -AWS
-    -K8
+    - Linux
+    - Shell
+    - Ansible
+    - Terraform
+    - AWS
+    - K8
     live: true #Boolean
     tools: #map/dictionary
       ci:  jenkins #string
