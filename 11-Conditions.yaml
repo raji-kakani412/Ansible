@@ -12,10 +12,10 @@
   - name: Print if number less than 10
     ansible.builtin.debug:
       msg: "Given number {{MyNumber}} is less than 10"
-    when: MyNumber < 10 #Conditional Expression
+    when: MyNumber | int < 10 #Conditional Expression
 
   - name: Print if number greater than or equal to 10
     ansible.builtin.debug:
       msg: "Given number {{MyNumber}} is greater than or equal to 10"
-    when: MyNumber >= 10 #Conditional Expression
+    when: MyNumber | int >= 10 #Conditional Expression
     
