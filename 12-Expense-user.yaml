@@ -11,7 +11,8 @@
   - name: Check user exist or not
     ansible.builtin.command: id expense # ANsible cannot guarantee modules exists for everything . we use direct commands if module not available using command 
     register: USER # user is a variable that gets output from above command 
-    
+    ignore_errors: true
+
   - name: Print the user information
     ansible.builtin.debug:
       msg: "User information is: {{USER}}"
