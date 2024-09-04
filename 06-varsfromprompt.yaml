@@ -14,4 +14,4 @@
   
   tasks:
    ansible.builtin.debug:
-     msg: "Hi,I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer is: {{TRAINER}}"
+      msg: "Hi,I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer is: {{TRAINER}}"
