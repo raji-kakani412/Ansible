@@ -2,16 +2,17 @@
   hosts: web
   
   vars_prompt: #to get values from prompt
-   - name: COURSE
-     prompt: Please enter the course name
-     private: false #not confidential information and will be displayed in the terminal
-   - name: DURATION
-     prompt: Please enter the duration
-     private: false
-   - name: TRAINER
-     prompt: Please enter the trainer name
-     private: false
+  - name: COURSE
+    prompt: Please enter the course name
+    private: false #not confidential information and will be displayed in the terminal
+  - name: DURATION
+    prompt: Please enter the duration
+    private: false
+  - name: TRAINER
+    prompt: Please enter the trainer name
+    private: false
   
   tasks:
+  - name: Print the course information
    ansible.builtin.debug:
       msg: "Hi,I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer is: {{TRAINER}}"
