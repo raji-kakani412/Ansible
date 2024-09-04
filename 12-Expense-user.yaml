@@ -9,7 +9,7 @@
 
   tasks:
   - name: Check user exist or not
-    ansible.builtin.command: id expense # ANsible cannot guarantee modules exists for everything . we use direct commands if module not available using command 
+    ansible.builtin.command: id expense # Ansible cannot guarantee that modules exists for everything . we use direct commands if module not available using command 
     register: USER # user is a variable that gets output from above command 
     ignore_errors: true
 
@@ -19,4 +19,5 @@
 
   - name: create user
     ansible.builtin.command: useradd expense
+      msg: "Adding user"
     when: USER.rc != 0
