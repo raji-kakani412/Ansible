@@ -1,5 +1,7 @@
 - name: DevOps datatypes information
   hosts: local
+  connection: local
+
   vars:
     Course: "DevOps with AWS" #String
     Duration: 120 #Number
@@ -15,7 +17,8 @@
       ci:  jenkins #string
       cm: Ansible
       Cloud: AWS
-    tasks:
+
+  tasks:
     - name: Print the course information
       ansible.builtin.debug:
         msg: "Hi, I am learning {{ Course }} with duration {{ Duration }} and topics are: {{ Topics }},live: {{ live }},and tools are {{ tools }}"
