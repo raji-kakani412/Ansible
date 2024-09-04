@@ -1,0 +1,10 @@
+- name: Gathering Facts
+  hosts: web
+  become: yes
+
+  tasks:
+  - name: Print the facts
+    ansible.builtin.debug:
+      msg: "Facts are: {{ ansible_facts }}"
+
+#copy the facts and save in facts.json file
