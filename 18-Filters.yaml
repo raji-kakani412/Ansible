@@ -1,0 +1,56 @@
+- name:  Demo on Filters or Functions
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: print the default variable
+    ansible.builtin.debug:
+    msg: "Hello {{ COURSE | default('Ansible') }}" # default is used to handle undefined variable
+  
+  - name: print in upper
+    vars:
+      greeting: "Hello Ramesh"
+    ansible.builtin.debug: 
+      msg: "{{ greeting | upper }}"
+
+   - name: print in lower
+    vars:
+      greeting: "Hello Ramesh"
+    ansible.builtin.debug: 
+      msg: "{{ greeting | lower }}"
+
+    - name: print unique values
+    vars:
+      ranks: [1,2,5,7,3,3,1,8,9,3,2,1,5]
+    ansible.builtin.debug: 
+      msg: "{{ ranks | unique }}"
+    
+    - name: print min and max values
+    vars:
+      ranks: [1,2,5,7,3,3,1,8,9,3,2,1,5]
+    ansible.builtin.debug: 
+      msg: "min: {{ ranks | min }} and max: {{ ranks | max}}"
+      
+    - name: convert map to list
+      vars:
+        Course:
+          Name: "Devops with AWS"
+          Duration: "120Hrs"
+          Trainer: "Sivakumar Reddy"
+      ansible.builtin.debug:
+        msg: "{{ Course | dict2items }}"
+
+    - name: convert list to map
+      vars:
+        Course:
+        - {"Key":"Name", "value": "Devops with AWS"}
+        - {"Key":"Duration", "value": "120Hrs"}
+        - {"Key":"Trainer", "value": "Sivakumar Reddy"}
+      ansible.builtin.debug:
+        msg: "{{ Course | items2dict }}"
+    - name: check Ip address
+      vars:
+       myip: "356.160.32.1" # valid max ip range 255.255.255.255
+       ansible.builtin.debug:
+        msg: "{{ myip | ansible.utils.ipv4 }}"
+    # for installing any python dependencies we need to intall them using pip3.9 install <dependencyname>
