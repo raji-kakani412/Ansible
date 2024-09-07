@@ -6,12 +6,14 @@
   - name: print the stats
     ansible.builtin.debug:
       msg: "{{ansible_facts}}"
+      
   #installing nginx based on os family
   - name: Installing nginx if redhat
     ansible.builtin.dnf:
       name: nginx
       state: present
     when: ansible_os_family == "RedHat"
+
   - name: Installing nginx if Debian
     ansible.builtin.apt:
       name: nginx
