@@ -1,0 +1,11 @@
+- name: loops from file
+  hosts: local
+  connection: local
+  vars_files:
+  - vars-file.yaml
+
+  tasks:
+  - name: loops from file
+    ansible.builtin.debug:
+      msg: "Hello, {{ item }}"
+    loop: vars-files.yaml
