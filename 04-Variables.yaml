@@ -4,15 +4,17 @@
    COURSE: "DevOps with AWS"
    DURATION: "120HRS"
    TRAINER: "SivaKumar Reddy"
+
   tasks:
   - name: print the information
     ansible.builtin.debug:
-     msg: "Hi, I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
+     msg: "Hi, I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}" #prints play level variables
+
   - name: print the information
     vars: #task level variables,only for this task
       COURSE: "Ansible"
     ansible.builtin.debug:
-     msg: "Hi, I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
+     msg: "Hi, I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}" # prints Course variable value from task level
 
 
   
