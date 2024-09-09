@@ -13,6 +13,13 @@
     zone: devops-aws.tech
 
   tasks:
+  - name: ansible install boto3 and botocore
+    ansible.builtin.pip:
+      name:
+      - boto3
+      - botocore
+      executable: pip3.9
+
   - name: create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{ item }}"
@@ -26,6 +33,7 @@
   - name : print the output
     ansible.builtin.debug:
      msg: "{{ ec2_instances }}"
+
 #private ip address
   - name: create r53 private records
     amazon.aws.route53:
