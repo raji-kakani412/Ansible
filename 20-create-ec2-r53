@@ -15,12 +15,12 @@
   tasks:
   
   # for installing any python dependencies we need to install them using pip3.9 install <dependencyname>
-  # - name: ansible install boto3 and botocore
-  #   ansible.builtin.pip:
-  #     name:
-  #     - boto3
-  #     - botocore
-  #     executable: pip3.9
+  - name: ansible install boto3 and botocore
+    ansible.builtin.pip:
+      name:
+      - boto3
+      - botocore
+      executable: pip3.9
 
   - name: create ec2 instance
     amazon.aws.ec2_instance:
