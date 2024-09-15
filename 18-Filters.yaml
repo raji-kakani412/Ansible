@@ -52,6 +52,6 @@
   - name: check Ip address
     vars:
       myip: "356.160.32.1" # valid max ip range 255.255.255.255
-      ansible.builtin.debug:
-      msg: "{{ myip | ansible.utils.ipv4}}"
+    ansible.builtin.debug:
+       msg: "{{ myip | ansible.utils.ipv4}}"
     # to install python dependencies we use pip3.9 install <dependency name>
