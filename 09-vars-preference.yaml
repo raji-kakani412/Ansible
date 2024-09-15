@@ -1,19 +1,19 @@
 - name: Variables
   hosts: web
   
-  # vars_files:
-  # - vars-file.yaml
+  vars_files:
+  - vars-file.yaml
 
-  # vars_prompt: #to get values from prompt
-  # - name: COURSE
-  #   prompt: Please enter the course name
-  #   private: false #not confidential information and will be displayed in the terminal
-  # - name: DURATION
-  #   prompt: Please enter the duration
-  #   private: false
-  # - name: TRAINER
-  #   prompt: Please enter the trainer name
-  #   private: false
+  vars_prompt: #to get values from prompt
+  - name: COURSE
+    prompt: Please enter the course name
+    private: false #not confidential information and will be displayed in the terminal
+  - name: DURATION
+    prompt: Please enter the duration
+    private: false
+  - name: TRAINER
+    prompt: Please enter the trainer name
+    private: false
 
   vars: #playlevel variables,all taks will have access to this
     COURSE: "DevOps with AWS from play level"
