@@ -42,12 +42,12 @@
 
   - name: convert list to map
     vars:
-      Course:
-      - { "Key": "Name","'value": "Devops with AWS" }
-      - { "Key": "Duration", "value": "120Hrs" }
-      - { "Key": "Trainer", "value": "Sivakumar Reddy" }
+      course:
+      - { "key": "Name","'value": "Devops with AWS" }
+      - { "key": "Duration", "value": "120Hrs" }
+      - { "key": "Trainer", "value": "Sivakumar Reddy" }
     ansible.builtin.debug:
-      msg: "{{ Course | items2dict }}"
+      msg: "{{ course | items2dict }}"
       
   - name: check Ip address
     vars:
