@@ -43,7 +43,7 @@
   - name: convert list to map
     vars:
       course:
-      - { "key": "Name","'value": "Devops with AWS" }
+      - { "key": "Name","value": "Devops with AWS" }
       - { "key": "Duration", "value": "120Hrs" }
       - { "key": "Trainer", "value": "Sivakumar Reddy" }
     ansible.builtin.debug:
