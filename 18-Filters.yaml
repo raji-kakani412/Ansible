@@ -5,7 +5,7 @@
   tasks:
   - name: print the default variable
     ansible.builtin.debug:
-    msg: "Hello {{ COURSE | default('Ansible') }}" # default is used to handle undefined variable
+      msg: "Hello {{ COURSE | default('Ansible') }}" # default is used to handle undefined variable
   
   - name: print in upper
     vars:
