@@ -12,6 +12,6 @@
     #log in to the server and executes command inside it whereas command module just issues the command. command is secure than 
 
   - name: check the process
-    andible.builtin.shell: ps -ef | grep ssh # this also will not work so we have to use shell
+    ansible.builtin.shell: ps -ef | grep ssh # this also will not work so we have to use shell
     register: output
   
