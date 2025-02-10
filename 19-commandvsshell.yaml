@@ -8,10 +8,12 @@
   tasks:
   - name: execute the command
      #ansible.builtin.command: ls -ltr > /tmp/output.txt #it will not work because it is using redirections
-    ansible.builtin.shell: ls -ltr > /tmp/output. 
+    ansible.builtin.shell: ls -ltr > /tmp/output
     # log in to the server and executes command inside it whereas command module just issues the command. command is secure than Shell
 
   - name: check the process
     ansible.builtin.shell: ps -ef | grep ssh # this also will not work with command so we have to use shell
     register: output
-  
+  - name: print output
+    ansible.builtin.debug:
+      msg:  " {{ output }}"
