@@ -22,10 +22,10 @@
 
   tasks:
   - name: print the information
-    vars: #task level variables,only for this task
-       COURSE: "DevOps with AWS from task level"
-       DURATION: "120HRS"
-       TRAINER: "SivaKumar Reddy"
+  #  vars: #task level variables,only for this task
+   #    COURSE: "DevOps with AWS from task level"
+    #   DURATION: "120HRS"
+     #  TRAINER: "SivaKumar Reddy"
     ansible.builtin.debug:
      msg: "Hi, I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
 
