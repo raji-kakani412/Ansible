@@ -7,4 +7,4 @@
     ansible.builtin.debug:
       msg: "Facts are: {{ ansible_facts }}"
 
-#copy the facts and save in facts.json file
+# copy the facts and save in facts.json file
