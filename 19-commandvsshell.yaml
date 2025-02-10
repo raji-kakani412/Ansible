@@ -14,6 +14,4 @@
   - name: check the process
     ansible.builtin.shell: ps -ef | grep ssh # this also will not work with command so we have to use shell
     register: output
-  - name: print output
-    ansible.builtin.debug:
-      msg:  " {{ output }}"
+
